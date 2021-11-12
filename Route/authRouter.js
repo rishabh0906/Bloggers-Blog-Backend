@@ -1,15 +1,14 @@
 const express=require("express");
 const authRouter=express.Router();
-authRouter.route("/signup").post(SignUpUser);
-
-authRouter.route("/login").post(LoginUser);
+// authRouter.route("/signup").post(SignUpUser);
 
 
-let SignUpUser= async (req,res)=>{
+
+// let SignUpUser= async (req,res)=>{
 
   
 
-}
+// }
 
 
 module.exports=authRouter;

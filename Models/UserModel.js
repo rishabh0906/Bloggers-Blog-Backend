@@ -6,23 +6,19 @@ mongoose
   .then(() => {
     console.log("db connected");
   })
-  .catch(() => {
-    console.log("error");
+  .catch((e) => {
+    console.log("error:",e);
   });
 
-  let UserSchema=new mongoose.Schema({
-      name:{
-          type:String,
-        required:true
-      },
-      email:{
-          type:String,
-          required:true,
-          unique:true
-      },
-      password:{
-          type:String,
-          required:true,
-          
-      }
-  })
+let UserSchema = new mongoose.Schema({
+ 
+  email: {
+    type: String,
+    required: true,
+    unique: true,
+  },
+});
+
+let userModel = mongoose.model("userModel", UserSchema);
+
+module.exports = userModel;
