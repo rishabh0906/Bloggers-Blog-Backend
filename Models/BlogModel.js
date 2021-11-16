@@ -11,9 +11,8 @@ mongoose
   });
 
 let BlogSchema = new mongoose.Schema({
-  Title: {
+  title: {
     type: String,
-    unique: true,
   },
   blog: {
     type: String,

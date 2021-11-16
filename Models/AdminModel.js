@@ -18,6 +18,9 @@ let AdminSchema = new mongoose.Schema({
   password: {
     type: String,
   },
+  token:{
+    type:String,
+  }
 });
 
 let AdminModel = mongoose.model("AdminModel", AdminSchema);
