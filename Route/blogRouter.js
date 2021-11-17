@@ -14,7 +14,7 @@ let getBlogs = async (req, res) => {
 };
 
 let createBlog = async (req, res) => {
-  console.log(req.cookie);
+  console.log(req.cookies);
   let { title, category, blog } = req.body;
 
   let createdBlog = await BlogModel.create({ title:title, category:category, blog:blog });

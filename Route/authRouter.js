@@ -33,6 +33,7 @@ let SignInUser = async (req, res) => {
         res.cookie("login", token, {
           httpOnly: true,
           maxAge:9000,
+
         });
         res.status(200).send({ status: "success" });
       } else {
