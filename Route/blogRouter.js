@@ -23,7 +23,7 @@ let createBlog = async (req, res) => {
 
 blogRouter.get("/allblogs", getBlogs);
 blogRouter
-  .post("/create", createBlog)
+  .post("/create", ProtectRoute,createBlog)
   // .post("/update", ProtectRoute, updateBlog)
   // .post("/delete", ProtectRoute, deleteBlog);
 

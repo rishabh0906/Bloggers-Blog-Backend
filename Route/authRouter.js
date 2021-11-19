@@ -32,7 +32,7 @@ let SignInUser = async (req, res) => {
         let token = JWT.sign({id:user["_id"]}, key);
         res.cookie("login", token, {
           httpOnly: true,
-          maxAge:9000,
+          maxAge:900000,
 
         });
         res.status(200).send({ status: "success" });
